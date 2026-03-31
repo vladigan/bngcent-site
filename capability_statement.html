@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BNG Contracting Enterprise — Capability Statement</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-size: 13px; color: #202124; background: #f8f9fa;
+    }
+    @media print {
+      body { background: #fff; }
+      .no-print { display: none; }
+      .page { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; }
+    }
+
+    /* ── Page ── */
+    .page {
+      max-width: 850px; margin: 30px auto; background: #fff;
+      border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #0d2137;
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: center; gap: 20px; padding: 28px 36px;
+    }
+    .company-name {
+      color: #fff; font-size: 24px; font-weight: 800; letter-spacing: .4px;
+    }
+    .company-tag {
+      color: #8ab4f8; font-size: 12px; margin-top: 4px; font-weight: 500;
+    }
+    .header-right {
+      text-align: right; color: #8ab4f8; font-size: 11px; line-height: 1.7;
+    }
+    .header-right a { color: #8ab4f8; text-decoration: none; }
+    .header-right strong { color: #fff; }
+
+    /* ── SAM Bar ── */
+    .sam-bar {
+      background: #1a73e8; padding: 10px 36px;
+      display: flex; gap: 32px; align-items: center; flex-wrap: wrap;
+    }
+    .sam-item { color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .3px; }
+    .sam-item span { font-weight: 400; opacity: .85; }
+
+    /* ── Body Grid ── */
+    .body-grid {
+      display: grid; grid-template-columns: 1fr 320px; gap: 0;
+    }
+    .main { padding: 28px 28px 28px 36px; border-right: 1px solid #e8eaed; }
+    .sidebar { padding: 28px 28px 28px 24px; background: #fafbfc; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 22px; }
+    .section-title {
+      font-size: 10px; font-weight: 800; color: #0d2137;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      border-bottom: 2px solid #0d2137; padding-bottom: 5px; margin-bottom: 10px;
+    }
+    .section p { font-size: 12px; line-height: 1.65; color: #3c4043; }
+
+    /* ── Capability Tags ── */
+    .fsc-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .fsc-tag {
+      background: #e8f0fe; color: #1a73e8; font-size: 11px; font-weight: 700;
+      border-radius: 5px; padding: 3px 9px; border: 1px solid #c5cae9;
+    }
+    .fsc-label { font-size: 10px; color: #5f6368; font-weight: 400; }
+
+    /* ── Capability List ── */
+    .cap-list { list-style: none; }
+    .cap-list li {
+      padding: 5px 0 5px 14px; font-size: 12px; color: #3c4043;
+      border-bottom: 1px solid #f1f3f4; position: relative; line-height: 1.4;
+    }
+    .cap-list li::before {
+      content: '▸'; position: absolute; left: 0; color: #1a73e8; font-size: 10px; top: 6px;
+    }
+    .cap-list li:last-child { border-bottom: none; }
+
+    /* ── Supplier Grid ── */
+    .supplier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+    .supplier {
+      font-size: 11px; font-weight: 600; color: #3c4043;
+      padding: 5px 10px; background: #fff; border: 1px solid #e8eaed;
+      border-radius: 6px; text-align: center;
+    }
+
+    /* ── KPI Row ── */
+    .kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; }
+    .kpi {
+      background: #fff; border: 1px solid #e8eaed; border-radius: 8px;
+      padding: 10px 12px; text-align: center;
+    }
+    .kpi-val { font-size: 20px; font-weight: 800; color: #0d2137; }
+    .kpi-lbl { font-size: 9px; font-weight: 700; color: #9aa0a6; letter-spacing: .6px; text-transform: uppercase; margin-top: 2px; }
+
+    /* ── Differentiators ── */
+    .diff-list { list-style: none; }
+    .diff-list li {
+      padding: 7px 0 7px 16px; font-size: 12px; line-height: 1.4;
+      color: #3c4043; border-bottom: 1px solid #f1f3f4; position: relative;
+    }
+    .diff-list li::before { content: '✓'; position: absolute; left: 0; color: #137333; font-weight: 700; }
+    .diff-list li:last-child { border-bottom: none; }
+
+    /* ── Contact Block ── */
+    .contact-block {
+      background: #0d2137; color: #fff; border-radius: 8px;
+      padding: 14px 16px; margin-top: 14px;
+    }
+    .contact-block .name { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+    .contact-block .detail { font-size: 11px; color: #8ab4f8; line-height: 1.8; }
+    .contact-block a { color: #8ab4f8; text-decoration: none; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #0d2137; padding: 10px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-left { color: #8ab4f8; font-size: 10px; }
+    .footer-right {
+      background: #137333; color: #fff; font-size: 11px;
+      font-weight: 700; padding: 6px 16px; border-radius: 6px;
+    }
+
+    /* Print button */
+    .print-btn {
+      display: block; margin: 16px auto; width: 200px; text-align: center;
+      background: #0d2137; color: #fff; border: none; border-radius: 8px;
+      padding: 10px 20px; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <div class="company-name">BNG Contracting Enterprise</div>
+      <div class="company-tag">Federal COTS Hardware Supplier &nbsp;·&nbsp; DLA / DIBBS Certified</div>
+    </div>
+    <div class="header-right">
+      <strong>brady@bngcent.com</strong><br>
+      Miami, FL 33101<br>
+      <a href="https://www.bngcent.com">www.bngcent.com</a><br>
+      SAM.gov Active Registrant
+    </div>
+  </div>
+
+  <!-- SAM Bar -->
+  <div class="sam-bar">
+    <div class="sam-item">CAGE Code <span>— on file</span></div>
+    <div class="sam-item">DUNS / UEI <span>— SAM.gov active</span></div>
+    <div class="sam-item">Business Size <span>Small Business</span></div>
+    <div class="sam-item">NAICS <span>423840 · 423610 · 441310</span></div>
+    <div class="sam-item">Active Since <span>2018</span></div>
+  </div>
+
+  <!-- Body -->
+  <div class="body-grid">
+
+    <!-- Main Column -->
+    <div class="main">
+
+      <!-- About -->
+      <div class="section">
+        <div class="section-title">Core Competency</div>
+        <p>
+          BNG Contracting Enterprise is a Miami-based small business specializing in the rapid sourcing
+          and delivery of commercial off-the-shelf (COTS) hardware, fasteners, fittings, and industrial
+          components to the Department of Defense via DLA DIBBS. We respond to DIBBS RFQs daily,
+          providing competitive pricing backed by established supplier relationships and same-day quote
+          turnaround for most standard line items.
+        </p>
+      </div>
+
+      <!-- Capabilities -->
+      <div class="section">
+        <div class="section-title">Capabilities by FSC</div>
+        <ul class="cap-list">
+          <li><strong>5305–5365 &nbsp;·&nbsp; Fasteners &amp; Hardware</strong> — bolts, nuts, screws, washers, rivets, pins, retaining rings. Full COTS range from McMaster-Carr.</li>
+          <li><strong>4720–4730 &nbsp;·&nbsp; Pipe &amp; Tube Fittings</strong> — hydraulic &amp; pneumatic fittings, couplings, adapters, elbows. Parker Hannifin / McMaster.</li>
+          <li><strong>4810–4820 &nbsp;·&nbsp; Valves</strong> — ball valves, gate valves, solenoid valves, check valves. Parker Hannifin primary source.</li>
+          <li><strong>6210–6240 &nbsp;·&nbsp; Lighting &amp; Electrical</strong> — LED lamps, lighting fixtures, electrical components. Grainger certified distributor.</li>
+          <li><strong>5110–5130 &nbsp;·&nbsp; Hand Tools</strong> — cutting tools, measuring tools, pliers, wrenches. Grainger &amp; MSC.</li>
+          <li><strong>3020 · 3460 &amp; 9320 &nbsp;·&nbsp; Mechanical &amp; Rubber</strong> — gears, pulleys, seals, O-rings, gaskets. McMaster-Carr &amp; MSC Industrial.</li>
+          <li><strong>2530 &nbsp;·&nbsp; Vehicle Parts</strong> — brake components, filters, bearings. Grainger supply chain.</li>
+        </ul>
+      </div>
+
+      <!-- Differentiators -->
+      <div class="section">
+        <div class="section-title">Why BNG Wins Bids</div>
+        <ul class="diff-list">
+          <li>Same-day quote response on 90% of DIBBS RFQs</li>
+          <li>Established accounts with McMaster-Carr, Grainger, Parker Hannifin, MSC Industrial, Fastenal, and Zoro for fast, accurate pricing</li>
+          <li>AI-assisted opportunity scoring to identify highest-margin line items</li>
+          <li>Competitive pricing on standard COTS — consistently at or below market</li>
+          <li>Clean delivery record — on-time fulfillment, proper packaging &amp; labeling</li>
+          <li>Flexible quantities — no minimum order restrictions on COTS hardware</li>
+          <li>Miami, FL logistics hub — close to Port of Miami for OCONUS supply chains</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <!-- KPIs -->
+      <div class="section">
+        <div class="section-title">At a Glance</div>
+        <div class="kpi-row">
+          <div class="kpi"><div class="kpi-val">29</div><div class="kpi-lbl">Active FSCs</div></div>
+          <div class="kpi"><div class="kpi-val">7+</div><div class="kpi-lbl">Years Active</div></div>
+          <div class="kpi"><div class="kpi-val">DLA</div><div class="kpi-lbl">Primary Agency</div></div>
+        </div>
+      </div>
+
+      <!-- Supplier Network -->
+      <div class="section">
+        <div class="section-title">Supplier Network</div>
+        <div class="supplier-grid">
+          <div class="supplier">McMaster-Carr</div>
+          <div class="supplier">Grainger</div>
+          <div class="supplier">Parker Hannifin</div>
+          <div class="supplier">MSC Industrial</div>
+          <div class="supplier">Fastenal</div>
+          <div class="supplier">Zoro</div>
+          <div class="supplier">Amazon Business</div>
+          <div class="supplier">+ Direct OEM</div>
+        </div>
+      </div>
+
+      <!-- FSC Tags -->
+      <div class="section">
+        <div class="section-title">FSC Coverage</div>
+        <div class="fsc-grid">
+          <div><span class="fsc-tag">5305</span><div class="fsc-label">Cap Screws</div></div>
+          <div><span class="fsc-tag">5306</span><div class="fsc-label">Bolts</div></div>
+          <div><span class="fsc-tag">5310</span><div class="fsc-label">Nuts</div></div>
+          <div><span class="fsc-tag">5315</span><div class="fsc-label">Pins</div></div>
+          <div><span class="fsc-tag">5320</span><div class="fsc-label">Rivets</div></div>
+          <div><span class="fsc-tag">5330</span><div class="fsc-label">O-Rings</div></div>
+          <div><span class="fsc-tag">5340</span><div class="fsc-label">Misc Hardware</div></div>
+          <div><span class="fsc-tag">4720</span><div class="fsc-label">Hose Fittings</div></div>
+          <div><span class="fsc-tag">4730</span><div class="fsc-label">Fittings</div></div>
+          <div><span class="fsc-tag">4810</span><div class="fsc-label">Valves</div></div>
+          <div><span class="fsc-tag">4820</span><div class="fsc-label">Valve Fittings</div></div>
+          <div><span class="fsc-tag">6210</span><div class="fsc-label">Lighting</div></div>
+          <div><span class="fsc-tag">6220</span><div class="fsc-label">Fixtures</div></div>
+          <div><span class="fsc-tag">5110</span><div class="fsc-label">Hand Tools</div></div>
+          <div><span class="fsc-tag">9320</span><div class="fsc-label">Rubber</div></div>
+          <div><span class="fsc-tag">3460</span><div class="fsc-label">Metalworking</div></div>
+        </div>
+      </div>
+
+      <!-- Point of Contact -->
+      <div class="section">
+        <div class="section-title">Point of Contact</div>
+        <div class="contact-block">
+          <div class="name">Brady Gay</div>
+          <div class="detail">
+            Owner &amp; Contracting Officer<br>
+            <a href="mailto:brady@bngcent.com">brady@bngcent.com</a><br>
+            Miami, FL 33101<br>
+            <a href="https://www.bngcent.com">www.bngcent.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-left">
+      BNG Contracting Enterprise &nbsp;·&nbsp; SAM.gov Active &nbsp;·&nbsp; DIBBS Registered Vendor &nbsp;·&nbsp; CAGE Code on file
+    </div>
+    <div class="footer-right">Ready to Quote</div>
+  </div>
+
+</div>
+</body>
+</html>
