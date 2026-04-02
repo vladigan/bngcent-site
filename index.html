@@ -697,7 +697,7 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   <!-- floating stat tags -->
   <div class="ftag blue" style="top:22%;right:3%;animation-delay:0s">
     <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-    $482K Active Pipeline
+    <!--STAT:pipeline_value-->$6K<!--/STAT--> Active Pipeline
   </div>
   <div class="ftag green" style="top:38%;right:1%;animation-delay:2s">
     <span class="fdot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></span>
@@ -827,7 +827,7 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   <div class="num-grid rv" style="transition-delay:.1s">
     <div class="nc">
       <svg class="nc-spark" viewBox="0 0 120 56" preserveAspectRatio="none"><defs><linearGradient id="sg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3B82F6" stop-opacity=".25"/><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/></linearGradient></defs><polygon points="0,56 0,40 15,34 30,36 48,28 62,22 78,16 95,10 120,4 120,56" fill="url(#sg1)"/><polyline points="0,40 15,34 30,36 48,28 62,22 78,16 95,10 120,4" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/></svg>
-      <div class="nc-val">28+</div><div class="nc-label">Active Solicitations</div><div class="nc-note">BID NOW pipeline</div>
+      <div class="nc-val"><!--STAT:total_opps-->94<!--/STAT--></div><div class="nc-label">Opportunities Analyzed</div><div class="nc-note">Total from database</div>
     </div>
     <div class="nc">
       <svg class="nc-spark" viewBox="0 0 120 56" preserveAspectRatio="none"><defs><linearGradient id="sg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#06B6D4" stop-opacity=".22"/><stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/></linearGradient></defs><polygon points="0,56 0,30 20,28 40,30 60,28 80,30 100,28 120,30 120,56" fill="url(#sg2)"/><polyline points="0,30 20,28 40,30 60,28 80,30 100,28 120,30" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-linejoin="round"/></svg>
@@ -835,11 +835,11 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
     </div>
     <div class="nc">
       <svg class="nc-spark" viewBox="0 0 120 56" preserveAspectRatio="none"><defs><linearGradient id="sg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981" stop-opacity=".22"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs><polygon points="0,56 0,44 18,38 35,32 52,26 70,20 88,16 105,12 120,8 120,56" fill="url(#sg3)"/><polyline points="0,44 18,38 35,32 52,26 70,20 88,16 105,12 120,8" fill="none" stroke="#10B981" stroke-width="1.5" stroke-linejoin="round"/></svg>
-      <div class="nc-val">15–30%</div><div class="nc-label">Gross Margin Target</div><div class="nc-note">Qty-adjusted pricing</div>
+      <div class="nc-val"><!--STAT:bids_submitted-->5<!--/STAT--></div><div class="nc-label">Bids Submitted</div><div class="nc-note">Auto-priced & filed</div>
     </div>
     <div class="nc">
       <svg class="nc-spark" viewBox="0 0 120 56" preserveAspectRatio="none"><defs><linearGradient id="sg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".2"/><stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/></linearGradient></defs><polygon points="0,56 0,46 25,40 50,35 75,28 100,20 120,16 120,56" fill="url(#sg4)"/><polyline points="0,46 25,40 50,35 75,28 100,20 120,16" fill="none" stroke="#A78BFA" stroke-width="1.5" stroke-linejoin="round"/></svg>
-      <div class="nc-val">6</div><div class="nc-label">Supplier Integrations</div><div class="nc-note">Live stock verification</div>
+      <div class="nc-val"><!--STAT:active_pipeline-->2<!--/STAT--></div><div class="nc-label">Active Pipeline</div><div class="nc-note">Bids awaiting award</div>
     </div>
   </div>
 </section>
@@ -1156,7 +1156,7 @@ const termLines = [
   { text: '▸ Next run in 04:00:00  |  Pipeline: $482K', cls: 'tc-cyan', delay: 6400 },
 ];
 const termBody = document.getElementById('termBody');
-const counterTargets = [847, 12, 482];
+const counterTargets = [94, 5, 6];
 const counterEls = ['ts1','ts2','ts3'];
 const counterFmts = [v => v.toString(), v => v.toString(), v => '$' + v + 'K'];
 let countersStarted = false;
