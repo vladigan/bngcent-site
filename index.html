@@ -388,6 +388,21 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
 .acd-blue{background:var(--blue2)}
 .acd-amber{background:#F59E0B}
 
+/* ─── HOW CAPS ROW ───────────────────────────────────────────────────────── */
+.hw-caps{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:40px;padding-top:32px;border-top:1px solid var(--bd)}
+.hw-cap{display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surf);border:1px solid var(--bd);border-radius:100px;font-size:.76rem;font-weight:500;color:var(--text);transition:all .2s;cursor:default}
+.hw-cap:hover{border-color:var(--bd2);color:var(--white)}
+.hw-cap-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hwci-b{background:rgba(37,99,235,.13);border:1px solid rgba(37,99,235,.2)}
+.hwci-b svg{stroke:var(--blue2)}
+.hwci-c{background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.17)}
+.hwci-c svg{stroke:var(--cyan)}
+.hwci-g{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.17)}
+.hwci-g svg{stroke:var(--green)}
+.hwci-p{background:rgba(180,83,9,.1);border:1px solid rgba(180,83,9,.2)}
+.hwci-p svg{stroke:var(--gold2)}
+@media(max-width:768px){.hw-caps{gap:8px}.hw-cap{font-size:.7rem;padding:6px 12px}}
+
 /* ─── ANIMATE ─────────────────────────────────────────────────────────────── */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .rv.vis{opacity:1;transform:translateY(0)}
@@ -484,7 +499,7 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   .n-links,.btn-o{display:none}
   .ham{display:flex}
   .ftag{display:none}
-  section,#tracker,#integrations,#numbers{padding:72px 5%}
+  section,#numbers{padding:72px 5%}
   .sv-grid{grid-template-columns:1fr}
   .how-wrap{grid-template-columns:1fr}
   .hw-card:first-child,.hw-card:nth-child(2){border-radius:0}
@@ -648,9 +663,8 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
 <nav id="nav">
   <a href="#" class="n-logo"><div class="n-mark">BNG</div>BNG Contracting</a>
   <div class="n-links">
-    <a href="#tracker">Live Operations</a>
     <a href="#how">How We Work</a>
-    <a href="#platform">Capabilities</a>
+    <a href="#numbers">Track Record</a>
     <a href="#serve">Who We Serve</a>
     <a href="#about">About</a>
   </div>
@@ -664,9 +678,8 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
 <div id="mo" onclick="closeMn()"></div>
 <nav id="mn">
   <button class="mn-x" onclick="closeMn()">✕</button>
-  <a href="#tracker" onclick="closeMn()">Live Operations</a>
   <a href="#how" onclick="closeMn()">How We Work</a>
-  <a href="#platform" onclick="closeMn()">Capabilities</a>
+  <a href="#numbers" onclick="closeMn()">Track Record</a>
   <a href="#serve" onclick="closeMn()">Who We Serve</a>
   <a href="#about" onclick="closeMn()">About</a>
   <a href="#cta" onclick="closeMn()">Contact</a>
@@ -701,9 +714,9 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
     <p class="h-sub">BNG Contracting Enterprise is a registered federal supplier that identifies, prices, and wins DLA DIBBS contracts on behalf of manufacturers and distributors — <strong>you focus on your product</strong>, we handle the government side.</p>
     <div class="h-btns">
       <a href="mailto:sales@bngcent.com" class="btn-hp">Start Winning Contracts</a>
-      <a href="#tracker" class="btn-hg">
+      <a href="#how" class="btn-hg">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-        See Live Platform
+        See How We Work
       </a>
     </div>
     <div class="h-stats">
@@ -734,219 +747,6 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="tkw">
-  <div class="tk">
-    <span class="tki"><span class="tkd" style="background:#3B82F6"></span>DIBBS Integration</span>
-    <span class="tki"><span class="tkd" style="background:#06B6D4"></span>SAM.gov Monitoring</span>
-    <span class="tki"><span class="tkd" style="background:#10B981"></span>AI Bid Pricing</span>
-    <span class="tki"><span class="tkd" style="background:#3B82F6"></span>NSN Lookup Engine</span>
-    <span class="tki"><span class="tkd" style="background:#A78BFA"></span>Playwright Automation</span>
-    <span class="tki"><span class="tkd" style="background:#10B981"></span>CAGE 12VS0 · SAM Active</span>
-    <span class="tki"><span class="tkd" style="background:#3B82F6"></span>DLA Federal Supplier</span>
-    <span class="tki"><span class="tkd" style="background:#06B6D4"></span>Award History via FPDS</span>
-    <span class="tki"><span class="tkd" style="background:#F59E0B"></span>McMaster-Carr · Grainger · MSC</span>
-    <span class="tki"><span class="tkd" style="background:#10B981"></span>Real-Time Opportunity Scoring</span>
-    <span class="tki"><span class="tkd" style="background:#3B82F6"></span>DIBBS Integration</span>
-    <span class="tki"><span class="tkd" style="background:#06B6D4"></span>SAM.gov Monitoring</span>
-    <span class="tki"><span class="tkd" style="background:#10B981"></span>AI Bid Pricing</span>
-    <span class="tki"><span class="tkd" style="background:#3B82F6"></span>NSN Lookup Engine</span>
-    <span class="tki"><span class="tkd" style="background:#A78BFA"></span>Playwright Automation</span>
-    <span class="tki"><span class="tkd" style="background:#10B981"></span>CAGE 12VS0 · SAM Active</span>
-    <span class="tki"><span class="tkd" style="background:#3B82F6"></span>DLA Federal Supplier</span>
-    <span class="tki"><span class="tkd" style="background:#06B6D4"></span>Award History via FPDS</span>
-    <span class="tki"><span class="tkd" style="background:#F59E0B"></span>McMaster-Carr · Grainger · MSC</span>
-    <span class="tki"><span class="tkd" style="background:#10B981"></span>Real-Time Opportunity Scoring</span>
-  </div>
-</div>
-
-<!-- LIVE PIPELINE FLOW -->
-<section id="pipeline-flow">
-  <div class="par-layer" data-speed="0.1" style="width:500px;height:500px;top:-20%;left:-5%;background:radial-gradient(circle,rgba(37,99,235,.08) 0%,transparent 70%)"></div>
-  <div class="par-layer" data-speed="0.15" style="width:400px;height:400px;bottom:-15%;right:-5%;background:radial-gradient(circle,rgba(6,182,212,.06) 0%,transparent 70%)"></div>
-  <div style="text-align:center;max-width:580px;margin:0 auto;position:relative;z-index:1" class="rv">
-    <div class="s-pill">Automated Operations</div>
-    <h2 class="st">From Solicitation to <span class="grad">Contract Award</span></h2>
-    <p class="ss" style="margin:0 auto">Every contract follows the same automated pipeline — monitored 24/7 with zero manual steps required.</p>
-  </div>
-  <div class="pf-inner rv" style="transition-delay:.12s">
-    <div class="pf-step">
-      <div class="pf-icon-wrap pfs-1">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </div>
-      <div class="pf-label">Opportunity<br>Found</div>
-      <div class="pf-sub">DIBBS / SAM.gov</div>
-    </div>
-    <div class="pf-connector"><div class="pf-track"></div><div class="pf-dot-wrap"><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div></div></div>
-    <div class="pf-step">
-      <div class="pf-icon-wrap pfs-2">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M16 2l4 4-4 4"/><path d="M20 2v4h-4"/></svg>
-      </div>
-      <div class="pf-label">AI<br>Scored</div>
-      <div class="pf-sub">Efficio AI engine</div>
-    </div>
-    <div class="pf-connector"><div class="pf-track"></div><div class="pf-dot-wrap"><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div></div></div>
-    <div class="pf-step">
-      <div class="pf-icon-wrap pfs-3">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="pf-label">Supplier<br>Matched</div>
-      <div class="pf-sub">McMaster · Grainger</div>
-    </div>
-    <div class="pf-connector"><div class="pf-track"></div><div class="pf-dot-wrap"><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div></div></div>
-    <div class="pf-step">
-      <div class="pf-icon-wrap pfs-4">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
-      </div>
-      <div class="pf-label">Bid<br>Submitted</div>
-      <div class="pf-sub">Playwright automation</div>
-    </div>
-    <div class="pf-connector"><div class="pf-track"></div><div class="pf-dot-wrap"><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div><div class="pf-anim-dot"></div></div></div>
-    <div class="pf-step">
-      <div class="pf-icon-wrap pfs-5">
-        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <div class="pf-label">Contract<br>Won</div>
-      <div class="pf-sub">Federal award</div>
-    </div>
-  </div>
-</section>
-
-<!-- LIVE TRACKER -->
-<section id="tracker">
-  <div class="tr-head rv">
-    <div>
-      <div class="s-pill">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        Live Operations
-      </div>
-      <h2 class="st">Active Contract <span class="grad">Pipeline</span></h2>
-      <p class="ss">Real-time view of our procurement operations — active solicitations, submitted bids, and awarded contracts across DIBBS and SAM.gov.</p>
-    </div>
-    <div class="tr-live-badge"><span class="tr-live-badge-dot"></span>System Online</div>
-  </div>
-
-  <div class="dash-mock rv" style="transition-delay:.15s">
-    <div class="scan-line"></div>
-    <div class="dm-topbar">
-      <div class="dm-dots"><span class="dm-d1"></span><span class="dm-d2"></span><span class="dm-d3"></span></div>
-      <div class="dm-url">localhost:5000 — BNG Contracting Enterprise Dashboard</div>
-      <div class="dm-status"><span class="dm-status-dot"></span>Connected</div>
-    </div>
-    <div class="dm-body">
-      <div class="dm-sidebar">
-        <div class="dm-nav-item active">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-          Dashboard
-        </div>
-        <div class="dm-nav-item">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Opportunities
-          <span class="dm-badge db-blue">28</span>
-        </div>
-        <div class="dm-nav-item">
-          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Submitted
-          <span class="dm-badge db-green">5</span>
-        </div>
-        <div class="dm-nav-item">
-          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          Pipeline
-        </div>
-        <div class="dm-nav-item">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-          System Log
-          <span class="dm-badge db-amber">3</span>
-        </div>
-        <div class="dm-stats">
-          <div class="dm-stat">
-            <div class="dm-stat-l">Pipeline Value</div>
-            <div class="dm-stat-v" id="pipelineVal">$482,000<span class="unit">est</span></div>
-            <div class="dm-bar-wrap"><div class="dm-bar-fill" style="width:72%"></div></div>
-          </div>
-          <div class="dm-stat">
-            <div class="dm-stat-l">Avg Margin</div>
-            <div class="dm-stat-v">28.4<span class="unit">%</span></div>
-            <div class="dm-bar-wrap"><div class="dm-bar-fill" style="width:58%"></div></div>
-          </div>
-          <div class="dm-stat">
-            <div class="dm-stat-l">BID NOW</div>
-            <div class="dm-stat-v">7<span class="unit">active</span></div>
-            <div class="dm-bar-wrap"><div class="dm-bar-fill" style="width:35%"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;overflow:hidden">
-        <div class="dm-main">
-          <div class="dm-section-title">Active Solicitations — BID NOW</div>
-          <div id="bidRows"></div>
-        </div>
-        <div class="dm-feed">
-          <div class="feed-title">Live Activity Feed</div>
-          <div id="feedRows"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DIBBS SOLICITATION MOCKUP -->
-<section id="dibbs-demo">
-  <div class="par-layer" data-speed="0.08" style="width:600px;height:400px;top:-10%;right:-8%;background:radial-gradient(circle,rgba(185,28,28,.07) 0%,transparent 70%)"></div>
-  <div class="par-layer" data-speed="0.12" style="width:400px;height:400px;bottom:-10%;left:-5%;background:radial-gradient(circle,rgba(37,99,235,.06) 0%,transparent 70%)"></div>
-  <div class="dibbs-wrap rv">
-    <div class="dibbs-card">
-      <div class="dibbs-hdr">
-        <div class="dibbs-agency-wrap">
-          <div class="dibbs-agency">DIBBS · DLA</div>
-          <div class="dibbs-agency-sub">Defense Internet Bidding System</div>
-        </div>
-        <div class="dibbs-live-badge">
-          <div class="dibbs-live-dot2"></div>
-          <span class="dibbs-live-txt">BID NOW</span>
-        </div>
-      </div>
-      <div class="dibbs-body">
-        <div class="dibbs-sol-num">Solicitation: SPE7M3-26-T-4615</div>
-        <div class="dibbs-sol-title">NIPPLE,PIPE — NSN 4730-00-014-4615</div>
-        <div class="dibbs-grid2">
-          <div class="df"><div class="df-lbl">Part Number</div><div class="df-val dv-blue">908402</div></div>
-          <div class="df"><div class="df-lbl">NSN</div><div class="df-val">4730-00-014-4615</div></div>
-          <div class="df"><div class="df-lbl">Quantity</div><div class="df-val dv-amber">500 EA</div></div>
-          <div class="df"><div class="df-lbl">Delivery</div><div class="df-val">90 Days ARO</div></div>
-          <div class="df"><div class="df-lbl">Bid Deadline</div><div class="df-val dv-amber">2 Days Remaining</div></div>
-          <div class="df"><div class="df-lbl">Destination</div><div class="df-val">DLA Richmond, VA</div></div>
-        </div>
-        <div class="dibbs-sep"></div>
-        <div class="dibbs-grid2">
-          <div class="df"><div class="df-lbl">Supplier Cost</div><div class="df-val">$1.52 / ea</div></div>
-          <div class="df"><div class="df-lbl">Total Cost</div><div class="df-val">$760.00</div></div>
-        </div>
-        <div class="dibbs-bid-box">
-          <div class="dibbs-bid-lbl"><strong>BNG Bid Price</strong>Calculated by Efficio AI</div>
-          <div class="dibbs-bid-right">
-            <div class="dibbs-bid-price">$2.17 / ea</div>
-            <div class="dibbs-bid-margin">+30.0% margin · $324 GP</div>
-          </div>
-        </div>
-      </div>
-      <div class="dibbs-ftr">
-        <div class="dibbs-ftr-note">⚡ Auto-submitting via Playwright</div>
-        <div class="dibbs-ftr-btn">Submit Bid →</div>
-      </div>
-    </div>
-    <div class="dibbs-text rv" style="transition-delay:.15s">
-      <div class="s-pill">Real Solicitation Example</div>
-      <h3>This Is What <span class="grad">We Bid On Daily</span></h3>
-      <p>Every day, BNG's system identifies solicitations like this one — resolves the NSN, matches it to a supplier, calculates margin, and submits the bid. You see purchase orders; we handle everything behind them.</p>
-      <div class="dibbs-bullet"><div class="dibbs-bdot"></div>NSN resolved to manufacturer part number via BidLink APL tables</div>
-      <div class="dibbs-bullet"><div class="dibbs-bdot"></div>Live McMaster-Carr pricing pulled and verified in real time</div>
-      <div class="dibbs-bullet"><div class="dibbs-bdot"></div>Bid price calculated automatically at your target margin</div>
-      <div class="dibbs-bullet"><div class="dibbs-bdot"></div>Submitted directly to DIBBS — zero manual entry, zero missed deadlines</div>
-    </div>
-  </div>
-</section>
 
 <!-- HOW IT WORKS -->
 <section id="how">
@@ -1003,60 +803,18 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
       <p class="hw-desc">Bids are submitted directly to DIBBS with zero manual entry and no missed deadlines. Every submission is logged, tracked, and followed through to award — then we manage fulfillment coordination with your suppliers.</p>
     </div>
   </div>
-</section>
-
-<!-- PLATFORM -->
-<section id="platform">
-  <div class="pl-top">
-    <div class="rv">
-      <div class="s-pill">Our Capabilities</div>
-      <h2 class="st">Proprietary Systems.<br><span class="grad">Purpose-Built for Federal</span></h2>
-    </div>
-    <div class="rv" style="transition-delay:.1s;align-self:flex-end">
-      <p class="ss">Every capability built specifically for DLA/DIBBS procurement. We operate the system — you receive the purchase orders.</p>
-      <div class="efficio-badge"><span class="eb-label">Powered by</span><span class="eb-dot"></span><span class="eb-name">Efficio AI</span></div>
-    </div>
+  <!-- Key capabilities (folded from platform) -->
+  <div class="hw-caps rv" style="transition-delay:.22s">
+    <div class="hw-cap"><span class="hw-cap-icon hwci-b"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>24/7 DIBBS + SAM.gov Monitoring</div>
+    <div class="hw-cap"><span class="hw-cap-icon hwci-c"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></span>AI-Powered Bid Pricing</div>
+    <div class="hw-cap"><span class="hw-cap-icon hwci-g"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>Direct DIBBS Submission</div>
+    <div class="hw-cap"><span class="hw-cap-icon hwci-p"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>NSN-to-Part# Matching</div>
+    <div class="hw-cap"><span class="hw-cap-icon hwci-b"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>6 Supplier Integrations</div>
   </div>
-  <div class="pl-grid rv" style="transition-delay:.18s">
-    <div class="pl-card">
-      <div class="pl-icon pli-b"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-      <div class="pl-title">24/7 Opportunity Intelligence</div>
-      <p class="pl-desc">Real-time parsing of DIBBS solicitations and SAM.gov postings. Automated triage scores every opportunity before you see it.</p>
-      <span class="pl-chip pc-b">Live Monitoring</span>
-    </div>
-    <div class="pl-card">
-      <div class="pl-icon pli-c"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M16 2l4 4-4 4"/><path d="M20 2v4h-4"/></svg></div>
-      <div class="pl-title">Precision Bid Pricing</div>
-      <p class="pl-desc">Our system ingests government estimates, FPDS award history, and live supplier costs to calculate the optimal bid price at your exact margin target.</p>
-      <span class="pl-chip pc-c">Proprietary AI</span>
-    </div>
-    <div class="pl-card">
-      <div class="pl-icon pli-g"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div class="pl-title">Direct DIBBS Submission</div>
-      <p class="pl-desc">Bids are submitted directly to the DIBBS portal with zero manual entry and zero missed deadlines. Every action logged and tracked to award.</p>
-      <span class="pl-chip pc-g">Zero Manual Entry</span>
-    </div>
-    <div class="pl-card">
-      <div class="pl-icon pli-p"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-      <div class="pl-title">NSN-to-Part# Matching</div>
-      <p class="pl-desc">Resolves National Stock Numbers to manufacturer part numbers via BidLink APL/AEL tables. Instantly identifies the right part at the right distributor.</p>
-      <span class="pl-chip pc-p">NSN Intelligence</span>
-    </div>
-    <div class="pl-card">
-      <div class="pl-icon pli-b"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-      <div class="pl-title">Pipeline Dashboard</div>
-      <p class="pl-desc">Real-time Flask dashboard aggregates every active bid, submission, and award into pipeline metrics — GP, margin %, win rate, and deadlines.</p>
-      <span class="pl-chip pc-b">Real-Time</span>
-    </div>
-    <div class="pl-card">
-      <div class="pl-icon pli-c"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <div class="pl-title">Supplier Network</div>
-      <p class="pl-desc">Integrated with McMaster-Carr, Grainger, MSC Industrial, Fastenal, and Zoro. Real-time stock and cost verification before every submission.</p>
-      <span class="pl-chip pc-c">6 Distributors</span>
-    </div>
+  <div style="text-align:center;margin-top:18px" class="rv" style="transition-delay:.28s">
+    <div class="efficio-badge"><span class="eb-label">Powered by</span><span class="eb-dot"></span><span class="eb-name">Efficio AI</span></div>
   </div>
 </section>
-
 <!-- NUMBERS -->
 <section id="numbers">
   <div style="text-align:center;margin-bottom:44px" class="rv">
@@ -1083,128 +841,6 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
       <svg class="nc-spark" viewBox="0 0 120 56" preserveAspectRatio="none"><defs><linearGradient id="sg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A78BFA" stop-opacity=".2"/><stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/></linearGradient></defs><polygon points="0,56 0,46 25,40 50,35 75,28 100,20 120,16 120,56" fill="url(#sg4)"/><polyline points="0,46 25,40 50,35 75,28 100,20 120,16" fill="none" stroke="#A78BFA" stroke-width="1.5" stroke-linejoin="round"/></svg>
       <div class="nc-val">6</div><div class="nc-label">Supplier Integrations</div><div class="nc-note">Live stock verification</div>
     </div>
-  </div>
-</section>
-
-<!-- CONTRACT TYPES -->
-<section id="contract-types">
-  <div class="par-layer" data-speed="0.1" style="width:500px;height:500px;top:-20%;right:-5%;background:radial-gradient(circle,rgba(37,99,235,.07) 0%,transparent 70%)"></div>
-  <div class="par-layer" data-speed="0.14" style="width:400px;height:400px;bottom:-10%;left:-8%;background:radial-gradient(circle,rgba(185,28,28,.05) 0%,transparent 70%)"></div>
-  <div style="text-align:center;max-width:560px;margin:0 auto;position:relative;z-index:1" class="rv">
-    <div class="s-pill">Federal Platforms</div>
-    <h2 class="st">Three Channels,<br><span class="grad">One Pipeline</span></h2>
-    <p class="ss" style="margin:0 auto">BNG operates across every major federal procurement platform — no opportunity gets missed.</p>
-  </div>
-  <div class="ct-grid rv" style="transition-delay:.12s">
-    <div class="ct-card ct-card-dla">
-      <div class="ct-icon ct-icon-dla"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="ct-name ct-name-dla">DLA · CAGE 12VS0</div>
-      <div class="ct-title">Defense Logistics Agency</div>
-      <p class="ct-desc">The U.S. military's primary supply chain. We're an approved DLA supplier — our CAGE code and SAM registration allow us to bid directly on defense supply contracts.</p>
-      <div class="ct-tag ct-tag-dla">Approved Supplier</div>
-      <div class="ct-volume">$500B+</div>
-      <div class="ct-volume-lbl">Annual DLA procurement spend</div>
-    </div>
-    <div class="ct-card ct-card-dibbs">
-      <div class="ct-icon ct-icon-dibbs"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div class="ct-name ct-name-dibbs">DIBBS · Primary Platform</div>
-      <div class="ct-title">Defense Internet Bidding</div>
-      <p class="ct-desc">Where DLA posts solicitations for military hardware, fasteners, fittings, and MRO parts. Our automated system monitors and bids every eligible solicitation around the clock.</p>
-      <div class="ct-tag ct-tag-dibbs">24/7 Automated</div>
-      <div class="ct-volume">10,000+</div>
-      <div class="ct-volume-lbl">Daily active solicitations</div>
-    </div>
-    <div class="ct-card ct-card-sam">
-      <div class="ct-icon ct-icon-sam"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-      <div class="ct-name ct-name-sam">SAM.gov · Registered</div>
-      <div class="ct-title">System for Award Mgmt.</div>
-      <p class="ct-desc">Our SAM.gov registration is current and active — a prerequisite for all federal contracting. We monitor SAM.gov alongside DIBBS to capture every eligible opportunity.</p>
-      <div class="ct-tag ct-tag-sam">Registration Active</div>
-      <div class="ct-volume">Active</div>
-      <div class="ct-volume-lbl">UEI + CAGE registered</div>
-    </div>
-  </div>
-</section>
-
-<!-- THE BRIDGE -->
-<section id="bridge">
-  <div class="ab" style="width:700px;height:400px;top:-15%;left:-12%;background:rgba(37,99,235,.06);animation:ab1 16s ease-in-out infinite"></div>
-  <div class="ab" style="width:500px;height:500px;bottom:-20%;right:-8%;background:rgba(6,182,212,.05);animation:ab2 20s ease-in-out infinite"></div>
-  <div class="data-streams" aria-hidden="true" id="bridgeStreams"></div>
-  <div style="max-width:580px" class="rv">
-    <div class="s-pill">How We Work</div>
-    <h2 class="st">Manufacturers Build.<br><span class="grad">BNG Wins the Contracts.</span></h2>
-    <p class="ss">BNG Contracting Enterprise is the procurement specialist that connects them — from solicitation to award, fully managed.</p>
-  </div>
-  <div class="br-grid rv" style="transition-delay:.14s">
-    <div class="br-side">
-      <div class="br-tag">The Manufacturer Side</div>
-      <div class="br-title">You Build the Products</div>
-      <ul class="br-list">
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>COTS hardware, industrial supply, MRO parts</li>
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Products that match DLA's NSN catalog</li>
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>No federal procurement experience needed</li>
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>No SAM.gov registration or DIBBS access required</li>
-      </ul>
-    </div>
-    <div class="br-center">
-      <div class="br-arr"></div>
-      <div class="br-arr2"></div>
-      <div class="br-center-box"><div class="bm">BNG</div><div class="bs">Federal Contractor</div></div>
-      <div class="br-arr"></div>
-      <div class="br-arr2"></div>
-    </div>
-    <div class="br-side">
-      <div class="br-tag">The Government Side</div>
-      <div class="br-title">The Government Buys</div>
-      <ul class="br-list">
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>DLA DIBBS solicitations matched to your catalog</li>
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>SAM.gov opportunities identified 24/7</li>
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Competitive bids submitted, priced with AI</li>
-        <li><span class="br-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Federal payment terms, guaranteed by contract</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ANIMATED COUNTERS -->
-<section id="ctr-strip">
-  <div class="ctr-grid">
-    <div class="ctr-item rv">
-      <div class="ctr-val" data-count="847" data-suffix="">0</div>
-      <div class="ctr-lbl">Solicitations Scanned Daily</div>
-    </div>
-    <div class="ctr-item rv" style="transition-delay:.07s">
-      <div class="ctr-val" data-count="28" data-suffix="+">0</div>
-      <div class="ctr-lbl">Active Bids in Pipeline</div>
-    </div>
-    <div class="ctr-item rv" style="transition-delay:.14s">
-      <div class="ctr-val" data-count="30" data-suffix="%">0</div>
-      <div class="ctr-lbl">Target Gross Margin</div>
-    </div>
-    <div class="ctr-item rv" style="transition-delay:.21s">
-      <div class="ctr-val" data-count="6" data-suffix="">0</div>
-      <div class="ctr-lbl">Supplier Integrations</div>
-    </div>
-  </div>
-</section>
-
-<!-- INTEGRATIONS -->
-<section id="integrations">
-  <p class="int-label rv">Federal platforms &amp; supplier networks we operate across</p>
-  <div class="int-row rv" style="transition-delay:.1s">
-    <div class="int-pill"><span class="ip-dot" style="background:#1B4FD8"></span>DIBBS / DLA</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#3B82F6"></span>SAM.gov</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#10B981"></span>BidLink</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#F59E0B"></span>FPDS.gov</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#EF4444"></span>McMaster-Carr</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#8B5CF6"></span>Grainger</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#06B6D4"></span>MSC Industrial</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#F97316"></span>Fastenal</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#84CC16"></span>Zoro</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#EC4899"></span>Claude AI</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#14B8A6"></span>USASpending.gov</div>
-    <div class="int-pill"><span class="ip-dot" style="background:#6366F1"></span>Amazon Business</div>
   </div>
 </section>
 
@@ -1321,54 +957,6 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div style="text-align:center;max-width:540px;margin:0 auto" class="rv">
-    <div class="s-pill">Partner Results</div>
-    <h2 class="st">What <span class="grad">Manufacturers Say</span></h2>
-    <p class="ss" style="margin:0 auto">Real suppliers, real contracts won. Here's what working with BNG looks like in practice.</p>
-  </div>
-  <div class="testi-grid" style="max-width:1200px;margin:0 auto;padding:0 6%">
-
-    <div class="testi-card rv">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">"BNG submitted our first DLA DIBBS bid within a week of onboarding. We'd been trying to break into federal contracting for two years on our own. They know the system inside and out."</p>
-      <div class="testi-author">
-        <img class="testi-avatar" src="https://i.pravatar.cc/150?img=57" alt="Robert H.">
-        <div>
-          <div class="testi-name">Robert H.</div>
-          <div class="testi-role">COO, Hartwell Industrial Parts</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testi-card rv">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">"We manufacture fasteners and hardware. BNG identified 40+ active solicitations matching our catalog in the first month. Three contract awards later, federal is now 20% of our revenue."</p>
-      <div class="testi-author">
-        <img class="testi-avatar" src="https://i.pravatar.cc/150?img=38" alt="Lisa M.">
-        <div>
-          <div class="testi-name">Lisa M.</div>
-          <div class="testi-role">Owner, Meridian Supply Co.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testi-card rv">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">"The compliance piece alone is worth it — SAM registration, CAGE codes, all the federal paperwork we had no idea about. BNG handled it all and kept us in good standing throughout."</p>
-      <div class="testi-author">
-        <img class="testi-avatar" src="https://i.pravatar.cc/150?img=60" alt="James W.">
-        <div>
-          <div class="testi-name">James W.</div>
-          <div class="testi-role">President, Westfield Defense Components</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- CTA -->
 <section id="cta">
   <div class="ab" style="width:600px;height:600px;top:-30%;left:-5%;background:rgba(37,99,235,.11);animation:ab1 14s ease-in-out infinite"></div>
@@ -1406,17 +994,15 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
     </div>
     <div class="fc">
       <h4>Operations</h4>
-      <a href="#tracker">Live Pipeline</a>
       <a href="#how">How We Work</a>
-      <a href="#platform">Capabilities</a>
       <a href="#numbers">Track Record</a>
+      <a href="#serve">Who We Serve</a>
     </div>
     <div class="fc">
-      <h4>Services</h4>
+      <h4>Company</h4>
       <a href="#serve">For Manufacturers</a>
-      <a href="#serve">Federal Entry</a>
-      <a href="#bridge">How We Work</a>
       <a href="#about">About &amp; Team</a>
+      <a href="/capability_statement.html">Capability Statement</a>
     </div>
     <div class="fc">
       <h4>Contact</h4>
@@ -1543,23 +1129,6 @@ document.querySelectorAll('.rv').forEach(el => ro.observe(el));
   frame();
 })();
 
-// ─── DATA STREAMS (bridge section)
-(function() {
-  const wrap = document.getElementById('bridgeStreams');
-  if (!wrap) return;
-  const colors = ['rgba(37,99,235,.3)', 'rgba(6,182,212,.25)', 'rgba(16,185,129,.2)'];
-  for (let i = 0; i < 12; i++) {
-    const el = document.createElement('div');
-    el.className = 'ds';
-    const x = 5 + Math.random() * 90;
-    const dur = 4 + Math.random() * 6;
-    const delay = Math.random() * 8;
-    const h = 60 + Math.random() * 120;
-    const col = colors[Math.floor(Math.random() * colors.length)];
-    el.style.cssText = `left:${x}%;height:${h}px;background:linear-gradient(180deg,transparent,${col},transparent);animation-duration:${dur}s;animation-delay:-${delay}s`;
-    wrap.appendChild(el);
-  }
-})();
 
 // ─── SMOOTH ANCHORS
 document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
@@ -1633,67 +1202,6 @@ const termObs = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 termObs.observe(document.getElementById('hero'));
 
-// ─── LIVE DASHBOARD MOCK DATA
-const bids = [
-  { rfq: 'SPE7M3-26-T-4615', desc: 'NIPPLE,PIPE — NSN 4730-00-014-4615', val: '$1,085', tag: 'BID NOW', tagCls: 'bt-now', status: 'bs-now', days: '2 days' },
-  { rfq: 'SPE8E6-26-T-1787', desc: 'BOLT,MACHINE — NSN 5305-00-071-2501', val: '$890', tag: 'BID NOW', tagCls: 'bt-now', status: 'bs-now', days: '4 days' },
-  { rfq: 'SPRDL1-26-T-0042', desc: 'VALVE,GATE — NSN 4820-00-268-5423', val: '$2,340', tag: 'QUOTE', tagCls: 'bt-quote', status: 'bs-quote', days: '6 days' },
-  { rfq: 'SPE4A6-26-T-9901', desc: 'BEARING,BALL — NSN 3110-00-134-5678', val: '$3,120', tag: 'SUBMITTED', tagCls: 'bt-sub', status: 'bs-sub', days: '—' },
-];
-const feed = [
-  { icon: 'fi-g', svg: '<polyline points="20 6 9 17 4 12"/>', text: '<strong>Bid Submitted</strong> — SPE7M3-26-T-4180 @ $2.17/ea', time: '2m ago' },
-  { icon: 'fi-b', svg: '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>', text: '<strong>NSN Matched</strong> — 4730-00-014-4615 → Part# 908402', time: '8m ago' },
-  { icon: 'fi-c', svg: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>', text: '<strong>New Opportunity</strong> — SPRDL1-26-T-0051 scored 91/100', time: '14m ago' },
-  { icon: 'fi-a', svg: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>', text: '<strong>Digest Sent</strong> — 7 BID NOW opps delivered', time: '1h ago' },
-];
-
-function buildDashboard() {
-  const br = document.getElementById('bidRows');
-  const fr = document.getElementById('feedRows');
-  bids.forEach((b, i) => {
-    const row = document.createElement('div');
-    row.className = 'bid-row';
-    row.style.animationDelay = (i * 0.08) + 's';
-    row.innerHTML = `<span class="bid-status ${b.status}"></span><span class="bid-rfq">${b.rfq}</span><span class="bid-desc">${b.desc}</span><div class="bid-meta"><span class="bid-val">${b.val}</span><span class="bid-tag ${b.tagCls}">${b.tag}</span><span class="bid-days">${b.days}</span></div>`;
-    br.appendChild(row);
-  });
-  feed.forEach(f => {
-    const item = document.createElement('div');
-    item.className = 'feed-item';
-    item.innerHTML = `<div class="feed-icon ${f.icon}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${f.svg}</svg></div><div class="feed-text">${f.text}</div><div class="feed-time">${f.time}</div>`;
-    fr.appendChild(item);
-  });
-}
-
-const dashObs = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting) { buildDashboard(); dashObs.disconnect(); }
-}, { threshold: 0.1 });
-dashObs.observe(document.getElementById('tracker'));
-
-// ─── ANIMATED COUNTERS
-(function() {
-  const strip = document.getElementById('ctr-strip');
-  if (!strip) return;
-  const ctrObs = new IntersectionObserver(entries => {
-    if (!entries[0].isIntersecting) return;
-    strip.querySelectorAll('[data-count]').forEach(el => {
-      const target = +el.dataset.count;
-      const suffix = el.dataset.suffix || '';
-      const duration = 1800;
-      const start = performance.now();
-      function tick(now) {
-        const p = Math.min((now - start) / duration, 1);
-        const ease = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(target * ease).toLocaleString() + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-        else el.textContent = target.toLocaleString() + suffix;
-      }
-      requestAnimationFrame(tick);
-    });
-    ctrObs.disconnect();
-  }, { threshold: 0.35 });
-  ctrObs.observe(strip);
-})();
 
 // ─── PARALLAX LAYERS
 (function() {
