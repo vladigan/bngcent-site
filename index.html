@@ -388,6 +388,52 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
 .acd-blue{background:var(--blue2)}
 .acd-amber{background:#F59E0B}
 
+/* ─── PLATFORM PREVIEW ───────────────────────────────────────────────────── */
+#platform-preview{background:var(--void);position:relative;overflow:hidden}
+.pp-frame{max-width:900px;margin:0 auto;background:rgba(6,12,24,.95);border:1px solid rgba(37,99,235,.2);border-radius:18px;overflow:hidden;box-shadow:0 0 80px var(--glow),0 0 140px rgba(185,28,28,.08),0 32px 80px rgba(0,0,0,.5)}
+.pp-titlebar{display:flex;align-items:center;gap:10px;padding:13px 18px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--bd)}
+.pp-dots{display:flex;gap:6px}
+.pp-dot-r{width:10px;height:10px;border-radius:50%;background:#FF5F57}
+.pp-dot-y{width:10px;height:10px;border-radius:50%;background:#FEBC2E}
+.pp-dot-g{width:10px;height:10px;border-radius:50%;background:#28C840}
+.pp-url{flex:1;margin:0 14px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:5px;padding:5px 12px;font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted)}
+.pp-live{display:flex;align-items:center;gap:6px;font-size:.65rem;font-weight:700;color:var(--green);letter-spacing:.08em;text-transform:uppercase}
+.pp-live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 1.5s ease infinite}
+.pp-body{padding:24px}
+.pp-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.pp-stat{background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:10px;padding:18px 16px;text-align:center}
+.pp-stat-val{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;background:linear-gradient(90deg,var(--blue2),var(--cyan2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px}
+.pp-stat-lbl{font-size:.67rem;font-weight:500;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.pp-pipeline{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:24px;flex-wrap:wrap;row-gap:8px}
+.pp-pipe-step{padding:8px 16px;border-radius:8px;font-size:.72rem;font-weight:600;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--bd);text-align:center;position:relative}
+.pp-pipe-step.pp-pipe-active{color:var(--blue3);border-color:rgba(37,99,235,.3);background:rgba(37,99,235,.08)}
+.pp-pipe-step.pp-pipe-won{color:var(--green2);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.08)}
+.pp-pipe-count{display:block;font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:400;color:var(--muted);margin-top:2px}
+.pp-pipe-arrow{width:20px;height:1px;background:var(--bd);flex-shrink:0}
+.pp-table-label{font-size:.65rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.pp-table-label::after{content:'';flex:1;height:1px;background:var(--bd)}
+.pp-table{display:flex;flex-direction:column;gap:6px}
+.pp-table-head{display:flex;align-items:center;gap:10px;padding:0 14px 6px;font-size:.6rem;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.pp-th{white-space:nowrap;overflow:hidden}
+.pp-table-row{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(255,255,255,.02);border:1px solid var(--bd);border-radius:9px;transition:all .3s}
+.pp-table-row:hover{background:rgba(37,99,235,.06);border-color:rgba(37,99,235,.15)}
+.pp-td{font-size:.73rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pp-td-nsn{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--blue3)}
+.pp-td-score{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--green2)}
+.pp-status{padding:3px 10px;border-radius:100px;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.pp-status-sub{background:rgba(37,99,235,.12);color:var(--blue3);border:1px solid rgba(37,99,235,.25)}
+.pp-status-price{background:rgba(245,158,11,.1);color:#FCD34D;border:1px solid rgba(245,158,11,.25)}
+.pp-status-won{background:rgba(16,185,129,.1);color:var(--green2);border:1px solid rgba(16,185,129,.25)}
+.pp-caption{text-align:center;font-size:.88rem;color:var(--muted);margin-top:28px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+@media(max-width:768px){
+  .pp-stats-row{grid-template-columns:1fr}
+  .pp-pipeline{flex-direction:column;align-items:stretch}
+  .pp-pipe-arrow{width:1px;height:12px;margin:0 auto}
+  .pp-table-head{display:none}
+  .pp-table-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .pp-td{white-space:normal}
+}
+
 /* ─── HOW CAPS ROW ───────────────────────────────────────────────────────── */
 .hw-caps{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:40px;padding-top:32px;border-top:1px solid var(--bd)}
 .hw-cap{display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surf);border:1px solid var(--bd);border-radius:100px;font-size:.76rem;font-weight:500;color:var(--text);transition:all .2s;cursor:default}
@@ -666,7 +712,7 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
     <a href="#how">How We Work</a>
     <a href="#numbers">Track Record</a>
     <a href="#serve">Who We Serve</a>
-    <a href="#about">About</a>
+    <a href="#platform-preview">Platform</a>
   </div>
   <div class="n-actions">
     <a href="#cta" class="btn-o">Contact</a>
@@ -681,7 +727,7 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   <a href="#how" onclick="closeMn()">How We Work</a>
   <a href="#numbers" onclick="closeMn()">Track Record</a>
   <a href="#serve" onclick="closeMn()">Who We Serve</a>
-  <a href="#about" onclick="closeMn()">About</a>
+  <a href="#platform-preview" onclick="closeMn()">Platform</a>
   <a href="#cta" onclick="closeMn()">Contact</a>
 </nav>
 
@@ -877,84 +923,77 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
   </div>
 </section>
 
-<!-- ABOUT / TEAM -->
-<section id="about">
+<!-- PLATFORM PREVIEW -->
+<section id="platform-preview">
   <div class="ab" style="width:600px;height:500px;top:-15%;right:-10%;background:rgba(37,99,235,.07);animation:ab1 14s ease-in-out infinite"></div>
   <div class="ab" style="width:400px;height:400px;bottom:-10%;left:-8%;background:rgba(6,182,212,.05);animation:ab2 18s ease-in-out infinite"></div>
-  <div style="text-align:center;max-width:540px;margin:0 auto" class="rv">
-    <div class="s-pill">Leadership</div>
-    <h2 class="st">The Operator <span class="grad">Behind the Contracts</span></h2>
-    <p class="ss" style="margin:0 auto">BNG is founder-operated. One contractor, one mission — winning federal contracts for manufacturers.</p>
+  <div style="text-align:center;max-width:600px;margin:0 auto 48px" class="rv">
+    <div class="s-pill">Platform Preview</div>
+    <h2 class="st">Your <span class="grad">Control Center</span></h2>
+    <p class="ss" style="margin:0 auto">See every opportunity from discovery to contract award — all in one automated dashboard.</p>
   </div>
-  <div class="abt-grid rv" style="transition-delay:.14s">
-    <div class="abt-left">
-      <div class="abt-tag">Founder &amp; Operator</div>
-      <div class="abt-name">Brady</div>
-      <div class="abt-title">BNG Contracting Enterprise LLC</div>
-      <p class="abt-bio">
-        Brady built BNG Contracting Enterprise from the ground up — establishing federal registrations, sourcing supplier relationships, and winning government contracts through DLA DIBBS. BNG operates a proprietary procurement system (powered by Efficio AI technology) that monitors solicitations, prices bids, and submits on behalf of manufacturers — founder-operated, results-focused.
-      </p>
-      <div class="abt-facts">
-        <div class="abt-fact">
-          <div class="abt-fact-icon afi-b"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.4 2 2 0 013.6 1.22h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.96a16 16 0 006.13 6.13l.96-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          716-771-8112
-        </div>
-        <div class="abt-fact">
-          <div class="abt-fact-icon afi-g"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          sales@bngcent.com
-        </div>
-        <div class="abt-fact">
-          <div class="abt-fact-icon afi-a"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          Buffalo, NY — serving federal buyers nationwide
-        </div>
-      </div>
-      <div class="abt-socials">
-        <a href="mailto:sales@bngcent.com" class="abt-social">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email
-        </a>
-        <a href="tel:7167718112" class="abt-social">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.4 2 2 0 013.6 1.22h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.96a16 16 0 006.13 6.13l.96-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Call
-        </a>
-        <a href="/capability_statement.html" class="abt-social">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Capability Statement
-        </a>
-      </div>
+  <div class="pp-frame rv" style="transition-delay:.14s">
+    <div class="pp-titlebar">
+      <div class="pp-dots"><span class="pp-dot-r"></span><span class="pp-dot-y"></span><span class="pp-dot-g"></span></div>
+      <div class="pp-url">bngcent.com/dashboard — Control Center</div>
+      <div class="pp-live"><span class="pp-live-dot"></span>LIVE</div>
     </div>
-    <div class="abt-right">
-      <div class="abt-card">
-        <div class="abt-card-label">Platform Snapshot</div>
-        <div class="abt-stats-grid">
-          <div class="abt-stat">
-            <div class="abt-stat-val">28+</div>
-            <div class="abt-stat-lbl">Target FSCs Monitored</div>
-          </div>
-          <div class="abt-stat">
-            <div class="abt-stat-val">24/7</div>
-            <div class="abt-stat-lbl">Automated Monitoring</div>
-          </div>
-          <div class="abt-stat">
-            <div class="abt-stat-val">6</div>
-            <div class="abt-stat-lbl">Supplier Integrations</div>
-          </div>
-          <div class="abt-stat">
-            <div class="abt-stat-val">AI</div>
-            <div class="abt-stat-lbl">Efficio AI Scoring</div>
-          </div>
+    <div class="pp-body">
+      <div class="pp-stats-row">
+        <div class="pp-stat">
+          <div class="pp-stat-val">43</div>
+          <div class="pp-stat-lbl">Active Opportunities</div>
         </div>
-        <div class="abt-card-label">Credentials &amp; Registrations</div>
-        <div class="abt-creds">
-          <div class="abt-cred"><div class="abt-cred-dot acd-green"></div>SAM.gov Active Registration</div>
-          <div class="abt-cred"><div class="abt-cred-dot acd-blue"></div>CAGE Code: 12VS0</div>
-          <div class="abt-cred"><div class="abt-cred-dot acd-green"></div>Small Business Certified</div>
-          <div class="abt-cred"><div class="abt-cred-dot acd-blue"></div>DLA DIBBS Approved Supplier</div>
-          <div class="abt-cred"><div class="abt-cred-dot acd-amber"></div>UEI Registered — Federal Procurement</div>
+        <div class="pp-stat">
+          <div class="pp-stat-val">5</div>
+          <div class="pp-stat-lbl">Bids Submitted</div>
+        </div>
+        <div class="pp-stat">
+          <div class="pp-stat-val">$6.9K</div>
+          <div class="pp-stat-lbl">Pipeline</div>
+        </div>
+      </div>
+      <div class="pp-pipeline">
+        <div class="pp-pipe-step pp-pipe-active">Sourced<span class="pp-pipe-count">43</span></div>
+        <div class="pp-pipe-arrow"></div>
+        <div class="pp-pipe-step pp-pipe-active">Scored<span class="pp-pipe-count">28</span></div>
+        <div class="pp-pipe-arrow"></div>
+        <div class="pp-pipe-step pp-pipe-active">Priced<span class="pp-pipe-count">12</span></div>
+        <div class="pp-pipe-arrow"></div>
+        <div class="pp-pipe-step">Submitted<span class="pp-pipe-count">5</span></div>
+        <div class="pp-pipe-arrow"></div>
+        <div class="pp-pipe-step pp-pipe-won">Won<span class="pp-pipe-count">2</span></div>
+      </div>
+      <div class="pp-table-label">Recent RFQs</div>
+      <div class="pp-table">
+        <div class="pp-table-head">
+          <span class="pp-th" style="flex:0 0 130px">NSN</span>
+          <span class="pp-th" style="flex:1">Description</span>
+          <span class="pp-th" style="flex:0 0 70px;text-align:center">Score</span>
+          <span class="pp-th" style="flex:0 0 100px;text-align:right">Status</span>
+        </div>
+        <div class="pp-table-row">
+          <span class="pp-td pp-td-nsn" style="flex:0 0 130px">5340-01-587-2346</span>
+          <span class="pp-td" style="flex:1">Bracket, Structural — Alum 6061</span>
+          <span class="pp-td pp-td-score" style="flex:0 0 70px;text-align:center">94</span>
+          <span class="pp-td" style="flex:0 0 100px;text-align:right"><span class="pp-status pp-status-sub">Submitted</span></span>
+        </div>
+        <div class="pp-table-row">
+          <span class="pp-td pp-td-nsn" style="flex:0 0 130px">5330-01-422-1190</span>
+          <span class="pp-td" style="flex:1">O-Ring, Fluorosilicone — MIL-spec</span>
+          <span class="pp-td pp-td-score" style="flex:0 0 70px;text-align:center">87</span>
+          <span class="pp-td" style="flex:0 0 100px;text-align:right"><span class="pp-status pp-status-price">Pricing</span></span>
+        </div>
+        <div class="pp-table-row">
+          <span class="pp-td pp-td-nsn" style="flex:0 0 130px">4730-01-338-5612</span>
+          <span class="pp-td" style="flex:1">Coupling, Hose — Stainless Steel</span>
+          <span class="pp-td pp-td-score" style="flex:0 0 70px;text-align:center">91</span>
+          <span class="pp-td" style="flex:0 0 100px;text-align:right"><span class="pp-status pp-status-won">Won</span></span>
         </div>
       </div>
     </div>
   </div>
+  <p class="pp-caption rv" style="transition-delay:.28s">Real-time pipeline management. Every opportunity tracked from discovery to contract award.</p>
 </section>
 
 <!-- CTA -->
@@ -1001,7 +1040,7 @@ footer{background:var(--deep);border-top:1px solid var(--bd);padding:56px 6% 36p
     <div class="fc">
       <h4>Company</h4>
       <a href="#serve">For Manufacturers</a>
-      <a href="#about">About &amp; Team</a>
+      <a href="#platform-preview">Platform</a>
       <a href="/capability_statement.html">Capability Statement</a>
     </div>
     <div class="fc">
